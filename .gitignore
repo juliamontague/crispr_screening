@@ -6,10 +6,6 @@
 # Ignore backup files
 *.bak
 
-# Ignore OS files
-.DS_Store
-Thumbs.db
-
 # Ignore log files
 *.log
 
@@ -17,16 +13,5 @@ Thumbs.db
 *.out
 *.o
 
-# Ignore results or data files
-*.tsv
-*.txt
-
-# Ignore directories for results or outputs
-results/
-output/
-
-# Ignore the config file 
-config.env
-
 # Ignore identifier files
-*.Identifier
+*Zone.Identifier
