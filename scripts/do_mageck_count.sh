@@ -11,7 +11,7 @@ fi
 source "$1"
 
 # Activate conda environment
-source ~/miniconda3/etc/profile.d/conda.sh
+source "$CONDA_PATH"
 conda activate "$CONDA_ENV_MAGECK"
 
 # Create output dir if not exists
@@ -30,7 +30,7 @@ done
 echo "Running MAGeCK count..."
 mageck count \
     -l "$LIBRARY_FILE" \
-    -n "$MAGECK_OUTPUT/gecko_screening_1" \
+    -n "$MAGECK_OUTPUT/"$PROJECT_NAME" \
     --sample-label "$SAMPLE_LABELS" \
     --fastq $FASTQ1 \
     --fastq-2 $FASTQ2

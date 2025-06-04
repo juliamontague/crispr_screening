@@ -9,13 +9,18 @@ fi
 
 source "$1"
 
-source ~/miniconda3/etc/profile.d/conda.sh
-conda activate "$CONDA_ENV_FASTQC"   # <-- change here
+source "$CONDA_PATH"
+conda activate "$CONDA_ENV_FASTQC"   
 
-mkdir -p "$FASTQC_DIR"                # <-- change here
+mkdir -p "$FASTQC_DIR"                
 
 echo "Running FastQC on files in $TRIMMED_DIR"
 fastqc "$TRIMMED_DIR"/*.fastq.gz -o "$FASTQC_DIR"
 
 echo "FastQC completed. Output saved to $FASTQC_DIR"
+echo "Running multiqc"
 
+conda activate "$CONDA_ENV_MULTIQC"
+multiqc "$FASTQC_DIR"
+
+echo "Quality control processing complete."

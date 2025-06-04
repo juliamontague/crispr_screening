@@ -13,22 +13,20 @@ Thumbs.db
 # Ignore log files
 *.log
 
-# Ignore compiled binaries (if any)
+# Ignore compiled binaries
 *.out
 *.o
 
-# Ignore any core dump files
-core
-
-# Ignore environment files
-.env
-
-# Ignore results or data files (customize as needed)
-*.csv
+# Ignore results or data files
 *.tsv
 *.txt
 
-# Ignore directories for results or outputs (example)
+# Ignore directories for results or outputs
 results/
 output/
 
+# Ignore the config file 
+config.env
+
+# Ignore identifier files
+*.Identifier
