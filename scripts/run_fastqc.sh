@@ -24,3 +24,4 @@ conda activate "$CONDA_ENV_MULTIQC"
 multiqc "$FASTQC_DIR"
 
 echo "Quality control processing complete."
+touch "${FASTQC_DIR}/fastqc.done"

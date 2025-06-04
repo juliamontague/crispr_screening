@@ -35,4 +35,6 @@ mageck count \
     --fastq $FASTQ1 \
     --fastq-2 $FASTQ2
 
-echo "MAGeCK count complete. Output in: $MAGECK_OUTPUT"
+echo "MAGeCK count complete."
+touch "${MAGECK_OUTPUT}/mageck_count.done"
+

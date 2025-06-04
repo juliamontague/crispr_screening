@@ -37,3 +37,5 @@ do
 done
 
 echo "All done."
+touch "${TRIMMED_DIR}/cutadapt.done"
+
