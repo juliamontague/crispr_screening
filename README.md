@@ -6,19 +6,40 @@ This project contains a pipeline for CRISPR knockout screening analysis.
 
 ## Project structure
 
+├── .gitignore
+├── Human_GeCKOv2_Library_combine.csv
+├── LICENSE
+├── README.md
+├── Snakefile
+├── config.env
+├── envs
+│   ├── cutadapt_env.yml
+│   ├── fastqc_env.yml
+│   ├── mageck_env.yml
+│   ├── multiqc_env.yml
+│   └── snakemake_env.yaml
+└── scripts
+    ├── do_mageck_count.sh
+    ├── do_mageck_test.sh
+    ├── run_cutadapt.sh
+    └── run_fastqc.sh
+
 - `scripts/` — pipeline scripts for processing and analysis  
 - `envs/` — conda environment YAML files for reproducible setup  
 - `config.env` — environment configuration file with customizable parameters  
-- `Human_GeCKOv2_Library_combine.csv` — CSV file containing sgRNA sequences for libraries A and B from Addgene human GeCKO v2  
+- `Human_GeCKOv2_Library_combine.csv` — CSV file containing sgRNA sequences for libraries A and B from human GeCKO v2 (Addgene)
 - `Snakefile` — Snakemake workflow file for executing the pipeline
 
 ## Data
 
-Input data should be paired-end amplicon sequencing FASTQ files with `_R1` and `_R2` suffixes, e.g.: `sample1_R1.fq` and `sample1_R2.fq`
+Input data should be compressed, paired-end amplicon sequencing FASTQ files with `_R1` and `_R2` suffixes, e.g.: 
+`sample1_R1.fastq.gz` and `sample1_R2.fastq.gz` or `sample1_R1.fq.gz` and `sample1_R2.fq.gz`
+
+The pipeline assumes that an initial quality check was already performed on the raw data. 
 
 ## Setup
 
-1. Create and activate the desired conda environment by specifying the appropriate YAML file, for example:
+1. Create and activate the conda environments by specifying the appropriate YAML file, for example:
 
 ```bash
 conda env create -f envs/environment1.yml

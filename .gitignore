@@ -15,3 +15,7 @@
 
 # Ignore identifier files
 *Zone.Identifier
+
+# Ignore the testing data
+test_data/
+test_config.env
