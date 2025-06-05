@@ -55,10 +55,13 @@ Replace `environment1.yml` and `environment1` with the name of the environment y
 Run the pipeline using snakemake
 
 ```bash
+conda activate snakemake
 snakemake --cores 4
 ```
 
-Make sure to run the pipeline from the project working directory
+Call the name of your actual snakemake environment.
+
+Make sure to run the pipeline from the project working directory.
 
 ### Pipeline execution order
 

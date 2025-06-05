@@ -22,15 +22,15 @@ FASTQ1=""
 FASTQ2=""
 
 for SAMPLE in "${SAMPLES[@]}"; do
-    FASTQ1+="$MAGECK_INPUT/${SAMPLE}_R1_trimmed.fastq.gz "
-    FASTQ2+="$MAGECK_INPUT/${SAMPLE}_R2_trimmed.fastq.gz "
+    FASTQ1+="$TRIMMED_DIR/${SAMPLE}_R1_trimmed.fastq.gz "
+    FASTQ2+="$TRIMMED_DIR/${SAMPLE}_R2_trimmed.fastq.gz "
 done
 
 # Run MAGeCK count
 echo "Running MAGeCK count..."
 mageck count \
     -l "$LIBRARY_FILE" \
-    -n "$MAGECK_OUTPUT/"$PROJECT_NAME" \
+    -n "${MAGECK_OUTPUT}/${PROJECT_NAME}" \
     --sample-label "$SAMPLE_LABELS" \
     --fastq $FASTQ1 \
     --fastq-2 $FASTQ2

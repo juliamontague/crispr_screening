@@ -48,10 +48,10 @@ do
 
     echo "Primer trimming: $BASE"
     cutadapt \
-        -b "$PRIMER_FWD" \
-        -b "$PRIMER_REV" \
-        -B "$PRIMER_FWD" \
-        -B "$PRIMER_REV" \
+        -g "$PRIMER_FWD" \
+        -g "$PRIMER_REV" \
+        -G "$PRIMER_FWD" \
+        -G "$PRIMER_REV" \
         -m 20 \
         -o "$OUT_R1" -p "$OUT_R2" \
         "$ADAPT_R1" "$ADAPT_R2" \

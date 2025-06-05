@@ -15,7 +15,15 @@ source "$CONDA_PATH"
 conda activate "$CONDA_ENV_MAGECK"
 
 # Run MAGeCK test
-mageck test -k "$MAGECK_OUTPUT/"$PROJECT_NAME" -t "$TREATMENTS" -c "$CONTROLS" -n $PROJECT_NAME --paired --pdf-report
+cd "${MAGECK_OUTPUT}" || { echo "Failed to enter ${MAGECK_OUTPUT}"; exit 1; }
+
+mageck test \
+  -k "${PROJECT_NAME}.count.txt" \
+  -t "${TREATMENTS}" \
+  -c "${CONTROLS}" \
+  -n "${PROJECT_NAME}" \
+  --paired \
+  --pdf-report
 
 echo "MAGeCK test complete."
 touch "${MAGECK_OUTPUT}/mageck_test.done"
