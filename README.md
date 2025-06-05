@@ -6,23 +6,23 @@ This project contains a pipeline for CRISPR knockout screening analysis.
 
 ## Project structure
 
-├── .gitignore
-├── Human_GeCKOv2_Library_combine.csv
-├── LICENSE
-├── README.md
-├── Snakefile
-├── config.env
-├── envs
-│   ├── cutadapt_env.yml
-│   ├── fastqc_env.yml
-│   ├── mageck_env.yml
-│   ├── multiqc_env.yml
-│   └── snakemake_env.yaml
-└── scripts
-    ├── do_mageck_count.sh
-    ├── do_mageck_test.sh
-    ├── run_cutadapt.sh
-    └── run_fastqc.sh
+├── .gitignore <br>
+├── Human_GeCKOv2_Library_combine.csv <br>
+├── LICENSE <br>
+├── README.md <br>
+├── Snakefile <br>
+├── config.env <br>
+├── envs <br>
+│   ├── cutadapt_env.yml <br>
+│   ├── fastqc_env.yml <br>
+│   ├── mageck_env.yml <br>
+│   ├── multiqc_env.yml <br>
+│   └── snakemake_env.yaml <br>
+└── scripts <br>
+    ├── do_mageck_count.sh <br>
+    ├── do_mageck_test.sh <br>
+    ├── run_cutadapt.sh <br>
+    └── run_fastqc.sh <br>
 
 - `scripts/` — pipeline scripts for processing and analysis  
 - `envs/` — conda environment YAML files for reproducible setup  
@@ -65,10 +65,21 @@ Make sure to run the pipeline from the project working directory.
 
 ### Pipeline execution order
 
-1 - run_cutadapt.sh
-2 - run_fastqc.sh
-3 - do_mageck_count.sh
-4 - do_mageck_test.sh 
+1 - run_cutadapt.sh <br>
+2 - run_fastqc.sh <br>
+3 - do_mageck_count.sh <br>
+4 - do_mageck_test.sh <br>
+
+## Third-Party Software & Licensing
+
+This project uses third-party software under the following licenses:
+
+- MAGeCK (BSD 3-Clause License): https://sourceforge.net/p/mageck/wiki/Home/ <br>
+- Cutadapt (MIT License): https://cutadapt.readthedocs.io/en/stable/ <br>
+- FastQC (GPL v3): https://www.bioinformatics.babraham.ac.uk/projects/fastqc/ <br>
+
+
+
 
 
 
