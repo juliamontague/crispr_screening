@@ -70,5 +70,16 @@ Make sure to run the pipeline from the project working directory.
 3 - do_mageck_count.sh <br>
 4 - do_mageck_test.sh <br>
 
+## Third-Party Software & Licensing
+
+This project uses third-party software under the following licenses:
+
+- MAGeCK (BSD 3-Clause License): https://sourceforge.net/p/mageck/wiki/Home/ <br>
+- Cutadapt (MIT License): https://cutadapt.readthedocs.io/en/stable/ <br>
+- FastQC (GPL v3): https://www.bioinformatics.babraham.ac.uk/projects/fastqc/ <br>
+
+
+
+
 
 
