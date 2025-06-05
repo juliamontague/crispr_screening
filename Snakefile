@@ -1,4 +1,4 @@
-CONFIG = "test_config.env"
+CONFIG = "config.env"
 
 rule all:
     input:
